@@ -1,10 +1,10 @@
 // Read data from data.js
 var tableData = data;
 
-var tbody = d3.select("tbody");
+var tbody = d3.select("ufo-table");
 
 // Select the button
-var button = d3.select("#button");
+var button = d3.select("#filter-btn");
 
 // Select the form
 var form = d3.select("#form");
