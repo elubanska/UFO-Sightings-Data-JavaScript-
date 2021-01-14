@@ -1,6 +1,6 @@
 // Read data from data.js
 var tableData = data;
-console.log(tableData);
+//console.log(tableData);
 
 var table = d3.select("#ufo-table");
 var tbody = table.select("tbody")
@@ -24,8 +24,7 @@ data.forEach((UFO_event) => {
   });
 
   function clear_data() {
-    var rows = tbody.selectAll("tbody")
-    rows.selectAll("tr").remove();
+    tbody.selectAll("tr").remove();
   }
 
 function runEnter() {
@@ -35,20 +34,30 @@ function runEnter() {
     var inputElement = d3.select("#datetime");
 
     clear_data();
-    console.log("Input Element:", inputElement);
+    //console.log("Input Element:", inputElement);
     // Get the value property of the input element
     var inputValue = inputElement.property("value");
-    console.log("Input Value: ", inputValue);
-    console.log(tableData);
+    //console.log("Input Value: ", inputValue);
     var filteredData = tableData.filter(tableData => tableData.datetime === inputValue);
-    console.log(filteredData);
+    //console.log(filteredData);
     
-    filteredData.forEach((UFO_event) => {
-        var row = tbody.append("tr");
-        Object.entries(UFO_event).forEach(([key,value]) => {
-          var cell = row.append("td");
-          cell.text(value);
-          //console.log("Cell value:", cell.text(value));
+    if(filteredData != "") {
+        filteredData.forEach((UFO_event) => {
+            var row = tbody.append("tr");
+            Object.entries(UFO_event).forEach(([key,value]) => {
+            var cell = row.append("td");
+            cell.text(value);
+            //console.log("Cell value:", cell.text(value));
+            });
         });
     }
-    )};
+    else {
+        tableData.forEach((UFO_event) => {
+            var row = tbody.append("tr");
+            Object.entries(UFO_event).forEach(([key,value]) => {
+              var cell = row.append("td");
+              cell.text(value);
+            });
+          });
+    }
+};
