@@ -42,8 +42,12 @@ function runEnter() {
     // Get the value property of the input element
     var inputValue = inputElement.property("value");
     var inputCityValue = inputCity.property("value");
+    var inputStateValue = inputState.property("value");
+    var inputCountryValue = inputCountry.property("value");
+    var inputShapeValue = inputShape.property("value");
     //console.log("Input Value: ", inputValue);
-    var filteredData = tableData.filter(tableData => tableData.datetime === inputValue || tableData.city == inputCityValue);
+    var filteredData = tableData.filter(tableData => tableData.datetime === inputValue && tableData.city == inputCityValue && tableData.state == inputStateValue ||
+      tableData.country == inputCountryValue && tableData.shape == inputShapeValue);
     //console.log(filteredData);
     
     if(filteredData != "") {
