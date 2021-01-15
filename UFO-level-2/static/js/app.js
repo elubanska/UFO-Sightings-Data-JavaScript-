@@ -32,13 +32,17 @@ function runEnter() {
     d3.event.preventDefault();
     // Select the input element and get the raw HTML node
     var inputElement = d3.select("#datetime");
+    var inputCity = d3.select("#city");
+    var inputState = d3.select("#state");
+    var inputCountry = d3.select("#country");
+    var inputShape = d3.select("#shape");
 
     clear_data();
     //console.log("Input Element:", inputElement);
     // Get the value property of the input element
     var inputValue = inputElement.property("value");
     //console.log("Input Value: ", inputValue);
-    var filteredData = tableData.filter(tableData => tableData.datetime === inputValue);
+    var filteredData = tableData.filter(tableData => tableData.datetime === inputValue || tableData.city === inputCity);
     //console.log(filteredData);
     
     if(filteredData != "") {
