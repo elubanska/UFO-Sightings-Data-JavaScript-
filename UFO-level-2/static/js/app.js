@@ -41,8 +41,9 @@ function runEnter() {
     //console.log("Input Element:", inputElement);
     // Get the value property of the input element
     var inputValue = inputElement.property("value");
+    var inputCityValue = inputCity.property("value");
     //console.log("Input Value: ", inputValue);
-    var filteredData = tableData.filter(tableData => tableData.datetime === inputValue || tableData.city === inputCity);
+    var filteredData = tableData.filter(tableData => tableData.datetime === inputValue || tableData.city == inputCityValue);
     //console.log(filteredData);
     
     if(filteredData != "") {
