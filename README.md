@@ -2,7 +2,7 @@
 
 ## Background
 
-In this project I'm dynamically create a table based upon a dataset provided. The dataset contains all eye-witness aliens sightings, date of the event, location and the shape of UFOs. User can filter the data based on the input provided in the form.
+In this project I dynamically create a table based upon a dataset provided. The dataset contains all eye-witness aliens sightings, date of the event, location and the shape of UFOs. User can filter the data based on the input provided in the form.
 
 ---
 
