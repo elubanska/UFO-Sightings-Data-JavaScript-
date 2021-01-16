@@ -38,17 +38,16 @@ function runEnter() {
     var inputShape = d3.select("#shape");
 
     clear_data();
-    //console.log("Input Element:", inputElement);
     // Get the value property of the input element
     var inputValue = inputElement.property("value");
     var inputCityValue = inputCity.property("value");
     var inputStateValue = inputState.property("value");
     var inputCountryValue = inputCountry.property("value");
     var inputShapeValue = inputShape.property("value");
-    //console.log("Input Value: ", inputValue);
+    
     var filteredData = tableData.filter(tableData => tableData.datetime === inputValue || tableData.city === inputCityValue 
      || tableData.state == inputStateValue || tableData.country == inputCountryValue || tableData.shape == inputShapeValue);
-    //console.log(filteredData);
+    
     
     if(filteredData != "") {
         filteredData.forEach((UFO_event) => {
@@ -56,7 +55,6 @@ function runEnter() {
             Object.entries(UFO_event).forEach(([key,value]) => {
             var cell = row.append("td");
             cell.text(value);
-            //console.log("Cell value:", cell.text(value));
             });
         });
     }
