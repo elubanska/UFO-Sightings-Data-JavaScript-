@@ -9,6 +9,7 @@ In this project I dynamically create a table based upon a dataset provided. The 
 ### Level 1: Automatic Table and Date Search (Required)
 
 * Allowes search database using just one criterion: `date/time` and shows data in the table.
+* UFO-level-1 folder
 
 ### Level 2: Multiple Search Categories (Optional)
 
@@ -19,6 +20,8 @@ In this project I dynamically create a table based upon a dataset provided. The 
   3. `state`
   4. `country`
   5. `shape`
+
+* UFO-level-2 folder
 
 - - -
 
