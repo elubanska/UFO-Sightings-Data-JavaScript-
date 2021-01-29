@@ -30,6 +30,9 @@ In this project I dynamically create a table based upon a dataset provided. The 
 * [UFO Sightings Data](StarterCode/static/js/data.js)
 
 - - -
+### Live webpage
+
+https://elubanska.github.io/javascript-challenge/
 
 ### Copyright
 
