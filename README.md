@@ -32,7 +32,7 @@ In this project I dynamically create a table based upon a dataset provided. The 
 - - -
 ### Live webpage
 
-https://elubanska.github.io/javascript-challenge/
+https://elubanska.github.io/UFO-Sightings-Data-JavaScript-/
 
 ### Copyright
 
