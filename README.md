@@ -4,6 +4,8 @@
 
 In this project I dynamically create a table based upon a dataset provided. The dataset contains all eye-witness aliens sightings, date of the event, location and the shape of UFOs. User can filter the data based on the input provided in the form.
 
+!(static/images/ufo.gif)
+
 ---
 
 ### Level 1: Automatic Table and Date Search (Required)
